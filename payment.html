@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+            text-align: center;
+            width: 99%;
+        }
+        .Gateway{
+            display: flex;
+            flex-direction: row;
+        }
+        .Gateway-Sub{
+             flex: 50%;
+             margin:0px 100px;
+             border-style: dotted;
+             padding-bottom: 50px;
+             width: 100%;
+            }
+        label{ 
+            font-family: monospace;
+            font-size: 120%;
+        }
+        input{
+            height: 28px;
+            width: 460px;
+        }
+        .Gateway-Sub-Sign{
+            height: 28px;
+            width: 430px;
+        }
+        form{
+            text-align: left;
+        }
+        .Card-Form{
+            margin-left: 35px;
+        }
+        #card-btn{color: black;
+            padding: 10px 198px;
+            font-family: fantasy;
+            text-decoration: solid;
+            font-size: 150%;
+        }
+        #sign-btn,#log-btn{color: black;
+            padding: 2px 120px;
+            font-family: fantasy;
+            text-decoration: solid;
+            font-size: 150%;
+            margin-left: 60px;
+        }
+        #log,#sign{
+            color:black;
+            padding: 2px 30px;
+            font-family: fantasy;
+            text-decoration: solid;
+            font-size: 150%;
+            background-color:deeppink;
+        }
+        #hiii{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="Main">
+    <div class="Menu-Bar"></div>
+    <h1 class="Heading" id="hiii">Swarnadeep Saha Poddar</h1>
+    <div class="Gateway">
+            <div class="Gateway-Sub">
+                <h2 class="Gateway-Sub-Heading">Payment Gateway</h2>
+                <img src="cardlogo.png" >
+                <form class="Card-Form" style="width: 80%;">
+                    <div>
+                        <label for="cardnumber">Card Number</label><br />
+                        <input id="cardnumber"type="number"placeholder="Enter 16 Digit number" >
+                    </div>
+                    <br />
+                    <div style="float: left;" >
+                        <label for="date">Exipry Date</label><br />
+                        <input id="date" type="text" placeholder="MM/YY" style="width:200px">
+                    </div>
+                    <div style="float: right;">
+                        <label for="cvv">Security Code</label><br />
+                        <input id="cvv" type="number" placeholder="CVV/CVC" style="width:120px">
+                    </div><br /><br /><br /><br />
+                    <div>
+                        <label for="cardnumber">Card Holder Name</label><br />
+                        <input id="cardnumber"type="text"placeholder="Name On Card">
+                    </div>
+                    <br />
+                    <button id="card-btn">Submit</button>
+                </form>
+            </div>
+            <div class="Gateway-Sub" style="padding-right: 60px;">
+                <h2 class="Gateway-Sub-Heading"id="log-sign" style="">Log Into Account</h2>
+                <form class="Card-Form" style="width: 80%;" id="log-in">
+                    <div>
+                        <label for="email">Email</label><br />
+                        <input id="email"type="number"placeholder="Email" class="Gateway-Sub-Sign">
+                    </div>
+                    <div>
+                        <label for="password">Password</label><br />
+                        <input id="password"type="number"placeholder="Ente Password"class="Gateway-Sub-Sign">
+                    </div>
+                    <br />
+                    <button id="log-btn">Log In</button>
+                </form>
+                <form class="Card-Form" style="width: 87%;display: none;" id="sign-up">
+                    <div>
+                        <label for="name">Name</label><br />
+                        <input id="name"type="text"placeholder="Name" class="Gateway-Sub-Sign">
+                    </div>
+                    <div>
+                        <label for="email">Email</label><br />
+                        <input id="email"type="number"placeholder="Email" class="Gateway-Sub-Sign">
+                    </div>
+                    <div>
+                        <label for="password">Password</label><br />
+                        <input id="password"type="number"placeholder="Create New Password"class="Gateway-Sub-Sign">
+                    </div>
+                    <br />
+                    <button id="sign-btn">Sign Up</button>
+                </form>
+                <br />                <br />                <br />                <br />                <br />                <br />                <br />                <br />                <br />                <br />                
+                <div style="margin-left: 50px;">
+                <button id="log">Log In</button>
+                <button id="sign">Sign Up</button>
+                </div>
+            </div>
+</div>  
+</div>
+<script type="text/javascript">
+document.getElementById("log").onclick=function(){
+           document.getElementById("log-in").style.display="block";
+           document.getElementById("sign-up").style.display="none";
+           document.getElementById("log-sign").innerHTML="Log Into Account"
+        }
+document.getElementById("sign").onclick=function(){
+           document.getElementById("log-in").style.display="none";
+           document.getElementById("sign-up").style.display="block";
+           document.getElementById("log-sign").innerHTML="Create New Account"
+        }
+document.getElementById("card-btn").onclick=function(){
+            alert("Thanks For The Payment")
+        }
+document.getElementById("sign-btn").onclick=function(){
+            alert("Thanks For Creating Account With Us")
+        }
+document.getElementById("log-btn").onclick=function(){
+            alert("U Are Sucessfully Logged In")
+        }
+</script>
+</body>
+</html>
